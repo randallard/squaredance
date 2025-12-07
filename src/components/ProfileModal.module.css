@@ -1,0 +1,300 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.form {
+  padding: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.input.valid {
+  border-color: #4caf50;
+}
+
+.input.invalid {
+  border-color: #f44336;
+}
+
+.error {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.stats {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.statsTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #646cff;
+}
+
+.backup {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.backupTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.backupDescription {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.backupActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.backupButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.backupButton:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+.backupMessage {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.cancelButton,
+.saveButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  border: none;
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: #888;
+  border: 2px solid #444;
+}
+
+.cancelButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.saveButton {
+  background-color: #646cff;
+  color: white;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: #535bf2;
+}
+
+.saveButton:disabled {
+  background-color: #444;
+  color: #666;
+  cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: light) {
+  .modal {
+    background-color: #fff;
+  }
+
+  .header {
+    border-bottom-color: #e0e0e0;
+  }
+
+  .title {
+    color: #213547;
+  }
+
+  .closeButton {
+    color: #666;
+  }
+
+  .closeButton:hover {
+    background-color: #f0f0f0;
+    color: #213547;
+  }
+
+  .label {
+    color: #333;
+  }
+
+  .input {
+    background-color: #f9f9f9;
+    border-color: #ccc;
+    color: #213547;
+  }
+
+  .stats,
+  .backup {
+    background-color: #f9f9f9;
+  }
+
+  .statsTitle,
+  .backupTitle {
+    color: #333;
+  }
+
+  .statLabel {
+    color: #666;
+  }
+
+  .backupDescription {
+    color: #666;
+  }
+
+  .backupMessage {
+    background-color: #e8e8e8;
+    color: #213547;
+  }
+
+  .cancelButton {
+    border-color: #ccc;
+    color: #666;
+  }
+
+  .cancelButton:hover {
+    background-color: #f0f0f0;
+    color: #213547;
+  }
+}

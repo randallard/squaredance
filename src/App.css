@@ -1,0 +1,40 @@
+.app {
+  width: 100%;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.profile-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.profile-button:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+.welcome {
+  font-size: 1.2em;
+  margin-top: 0;
+  color: #888;
+}

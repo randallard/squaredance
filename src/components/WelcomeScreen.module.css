@@ -1,0 +1,166 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #646cff;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.input.valid {
+  border-color: #4caf50;
+}
+
+.input.invalid {
+  border-color: #f44336;
+}
+
+.error {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.helper {
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #535bf2;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.divider {
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.divider span {
+  position: relative;
+  background-color: #242424;
+  padding: 0 1rem;
+  color: #888;
+}
+
+.restore {
+  text-align: center;
+}
+
+.restoreText {
+  margin-bottom: 1rem;
+  color: #888;
+}
+
+.restoreButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.restoreButton:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+.backupMessage {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #333;
+  border-radius: 8px;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  .divider span {
+    background-color: #ffffff;
+  }
+
+  .backupMessage {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+}
